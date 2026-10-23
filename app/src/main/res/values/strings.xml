@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Volume Limiter</string>
+    <string name="service_description">Intercepts volume key events and limits the maximum volume level.</string>
+    <string name="settings_title">Volume Limiter Settings</string>
+    <string name="max_volume_label">Max Volume:</string>
+    <string name="start_protection">Start protection</string>
+    <string name="stop_protection">Stop protection</string>
+    <string name="enable_accessibility">Enable volume-key blocking</string>
+    <string name="show_icon">Show app icon</string>
+    <string name="notification_channel_name">Volume Limiter</string>
+    <string name="notification_text">Volume limiter is active</string>
+    <string name="tv_a11y_hint">To stop Android TV from killing the app, enable its accessibility service via ADB on your PC:\n\nadb shell settings put secure enabled_accessibility_services com.volume.limiter/.VolumeLimiterService\n\nadb shell settings put secure accessibility_enabled 1</string>
+</resources>

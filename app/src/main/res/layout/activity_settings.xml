@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/currentVolumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/max_volume_label"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_protection"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/openA11yButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_accessibility"
+        android:layout_marginTop="16dp" />
+
+    <Switch
+        android:id="@+id/iconSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_icon"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_a11y_hint"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>

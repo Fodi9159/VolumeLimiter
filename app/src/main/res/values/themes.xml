@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Leanback" parent="@style/Theme.Leanback">
+        <item name="android:colorPrimary">#FF6200EE</item>
+        <item name="android:colorPrimaryDark">#FF3700B3</item>
+        <item name="android:colorAccent">#FF03DAC5</item>
+        <item name="android:windowBackground">#FF121212</item>
+    </style>
+
+    <style name="Theme.VolumeLimiter.Phone" parent="@android:style/Theme.Material">
+        <item name="android:colorPrimary">#FF6200EE</item>
+        <item name="android:colorPrimaryDark">#FF3700B3</item>
+        <item name="android:colorAccent">#FF03DAC5</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="@android:style/Theme.Material">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

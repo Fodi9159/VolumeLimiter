@@ -1,0 +1,24 @@
+# Gradle build output and caches
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Local machine configuration
+local.properties
+
+# Local app state and scratch files
+prefs.xml
+crash_diagnostic.txt
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db

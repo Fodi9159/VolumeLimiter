@@ -1,15 +1,15 @@
 # Volume Limiter
 
 Android app that caps the device's maximum volume level. Built for **Android TV / Google TV**
-boxes, where the stock OS offers no per-app or global volume limit — handy for keeping the
+boxes, where the stock OS offers no per-app or global volume limit, handy for keeping the
 night quiet, or for stopping kids (and guests) from pinning the volume to max.
 
 Works two independent ways, and uses both at once:
 
-- **Volume-key interception** — an accessibility service sees `KEYCODE_VOLUME_UP` before the
+- **Volume-key interception**, an accessibility service sees `KEYCODE_VOLUME_UP` before the
   system does and pulls every stream back down to your limit, so pressing up past the limit
   does nothing at all.
-- **Continuous clamping** — a foreground service polls all audio streams every 200 ms and also
+- **Continuous clamping**, a foreground service polls all audio streams every 200 ms and also
   reacts to `VOLUME_CHANGED_ACTION`, so volume raised by any other app, a remote, a
   Bluetooth device or a cast session gets clamped too.
 
@@ -47,7 +47,7 @@ adb install app-debug.apk
 
 ## Setup
 
-1. Open **Volume Limiter** from the launcher (or open `volumelimiter://open` — the app
+1. Open **Volume Limiter** from the launcher (or open `volumelimiter://open`, the app
    registers a deep link, so you can launch it from any browser or `adb`:
    `adb shell am start -a android.intent.action.VIEW -d "volumelimiter://open"`).
 2. Drag the slider or type a number. Default limit is **50** out of 100.
@@ -61,7 +61,7 @@ service is running.
 
 ### Android TV: enable accessibility over ADB
 
-The TV accessibility screen is easy to get lost in, so the app ships a shortcut — on the TV
+The TV accessibility screen is easy to get lost in, so the app ships a shortcut, on the TV
 layout the settings screen prints the exact commands:
 
 ```bash
@@ -84,7 +84,7 @@ adb shell settings put secure accessibility_enabled 1
 
 ## Streams covered
 
-`STREAM_MUSIC`, `STREAM_VOICE_CALL`, `STREAM_NOTIFICATION`, `STREAM_SYSTEM` — the four
+`STREAM_MUSIC`, `STREAM_VOICE_CALL`, `STREAM_NOTIFICATION`, `STREAM_SYSTEM`: the four
 streams a TV normally exposes. Each is clamped independently, and the limit is an absolute
 index on the stream's own 0–100 scale, so set the slider with the stream you care about at
 its real maximum first.
@@ -120,7 +120,7 @@ app/src/main/
 
 ## Known limitations
 
-- The clamp service polls every 200 ms. It's cheap, but not free — battery use is small yet
+- The clamp service polls every 200 ms. It's cheap, but not free, battery use is small yet
   non-zero while protection is on.
 - Volume-key interception stops working if Android kills the accessibility service (low
   memory, or the user revoking it). The TV layout hints at the ADB command because this is
@@ -132,4 +132,4 @@ app/src/main/
 
 ## License
 
-MIT — do what you like, no warranty.
+MIT: do what you like, no warranty.
